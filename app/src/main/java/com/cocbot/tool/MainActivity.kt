@@ -31,7 +31,7 @@ class MainActivity : Activity() {
 
         root.addView(label("Chế độ"))
         val group = RadioGroup(this)
-        Mode.values().forEach { m -> group.addView(RadioButton(this).apply { text = m.label; tag = m.name; id = generateViewId(); isChecked = m == cfg.mode }) }
+        Mode.values().forEach { m -> group.addView(RadioButton(this).apply { text = m.label; tag = m.name; id = android.view.View.generateViewId(); isChecked = m == cfg.mode }) }
         root.addView(group)
 
         val fields = linkedMapOf<String, EditText>()
